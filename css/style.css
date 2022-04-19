@@ -1,0 +1,329 @@
+a.skip {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+
+a.skip:focus, a.skip:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	font-family: 'Mali', cursive;
+}
+
+.parallax {
+	background-image: url(../images/about_background.jpg);
+    background-color: #f1f1f1;
+	min-height: 500px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+.h2{
+	font-weight: bolder;
+}
+
+.active{
+	background: white;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+.active a{
+	text-decoration: none;;
+}
+
+.sources{
+	font-weight: bold;
+}
+
+.image-container {
+	position: relative;
+	height: fit-content;
+	width: min-content;
+	margin: 10px;
+}
+
+img{
+    height: 200px;
+    width: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+	display: block
+}
+
+img :nth-child(2n){
+    border: 5px solid coral;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.image-container:hover .overlay {
+	opacity: .5;
+}
+
+h2{
+	font-size: 18pt;
+	font-weight: bold;
+	align-content: center;
+}
+
+p, h1, h2 {
+    padding: 10px;
+}
+
+header, nav, main, h1, footer{
+	border: 2px solid white;
+	margin: 10px 0;
+}
+
+nav li{
+	padding:10px;
+	width:5%;;
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+}
+
+.nav{
+	background: coral;
+	padding: 5px;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.flip-card {
+	background-color: coral;
+	width: 300px;
+	height: 100px;
+	border: 1px solid #f1f1f1;
+	margin: 5px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-back {
+	background-color: white;
+	color: black;
+	transform: rotateY(180deg);
+}
+
+.caption{
+	font-style: italic;
+	font-size: 12pt;
+	color: rgb(51, 51, 51);
+	margin-left: 60px;
+}
+
+.description{
+	font-size: 14pt;
+	color: rgb(51, 51, 51);
+	text-align: center;
+}
+
+#zoom{
+	animation: movement 5s ease;
+}
+
+@keyframes movement {
+	from {width: 0px; opacity: 0;}
+	to {width: 300px; opacity: 1;}
+}
+
+a:visited{color: darkblue}
+
+fieldset{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+}
+
+legend{
+	font-size: 125%;
+	font-style:italic;
+	font-weight: bolder;
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 8px;
+	font-family: 'Mali', cursive;
+	background-color: lightgray;
+}
+
+span{
+	margin-left:20%;
+	font-family: italic;
+	font-weight: bold;
+}
+  
+textarea{
+	width: 100%;
+	height: 35vh;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 8px;
+	font-family: 'Mali', cursive;
+	background-color: lightgray;
+}
+
+input[type=submit] {
+	background-color: coral;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+	font-family: 'Mali', cursive;
+}
+  
+input[type=submit]:hover {
+	background-color: black;
+	color: white
+}
+
+.container-highlight-images{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+
+.container-gallery{
+	display: grid;
+	padding: 2rem;
+	grid-template-columns: 300px 1fr;
+	gap: 1rem;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+  @media screen and (min-width: 768px) {
+	form{
+	  width: 80%;
+	  margin: 0 auto;
+	}
+  
+	input{
+	  width:80%;
+	}
+  
+	textarea{
+	  width:80%;
+	  height: 25vh;
+   }
+   
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+  }
+
+  @media all and (max-width: 600px) { 
+	.nav-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: fit-content;
+	}
+
+	.nav li{
+		flex-basis: 50%;
+	}
+  }
+
+
+   @media screen and (prefers-reduced-motion: reduce){
+	.zoom {
+		animation:none;
+	  }
+
+	.flip-card:hover .flip-card-inner,
+	.flip-card:focus-within .flip-card-inner,
+	.flip-card:active .flip-card-inner,
+	.flip-card:focus .flip-card-inner {
+		  transform: none;
+	  }
+
+	.parallax {
+		background-attachment: none;
+		background-position: none;
+		background-repeat: none;
+		background-size: none;
+	  }
+  }
